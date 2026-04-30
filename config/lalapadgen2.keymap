@@ -67,6 +67,11 @@
             bindings = <&kp EQUAL>;
             key-positions = <8 9>;
         };
+
+        COMBO_DELETE {
+            bindings = <&kp DELETE>;
+            key-positions = <18 19>;
+        };
     };
 
     keymap {
