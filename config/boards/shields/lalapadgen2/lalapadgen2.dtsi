@@ -159,14 +159,21 @@
         status = "disabled";
         device = <&trackpad_split_R>;
         input-processors = <&trackpad_key_behaviors_R>,
-                           <&zip_xy_scaler 1 5>,
-                           <&zip_scroll_scaler 1 12>,
+                           /* カーソル速度スケール: <分子 分母> = 1/4倍。分母を小さくすると速く、大きくすると遅い */
+                           <&zip_xy_scaler 1 4>,
+                           /* スクロール速度スケール: <分子 分母> = 1/16倍。分母を小さくすると速く、大きくすると遅い */
+                           <&zip_scroll_scaler 1 16>,
+                           /* キーバインドで動的にカーソル速度を増減できるスケーラ */
                            <&zip_dynamic_xy_scaler>,
+                           /* キーバインドで動的にスクロール速度を増減できるスケーラ */
                            <&zip_dynamic_scroll_scaler>;
+        /* 低速モード: レイヤー1,2で適用（精密操作向け） */
         lowspeedmode {
             layers = <1>,<2>;
             input-processors =  <&trackpad_key_behaviors_R>,
+                                /* 低速モード カーソル速度: 1/15倍 */
                                 <&zip_xy_scaler 1 15>,
+                                /* 低速モード スクロール速度: 1/40倍 */
                                 <&zip_scroll_scaler 1 40>,
                                 <&zip_dynamic_xy_scaler>,
                                 <&zip_dynamic_scroll_scaler>;
@@ -177,14 +184,21 @@
         status = "disabled";
         device = <&trackpad_split_L>;
         input-processors = <&trackpad_key_behaviors_L>,
-                           <&zip_xy_scaler 1 5>,
-                           <&zip_scroll_scaler 1 12>,
+                           /* カーソル速度スケール: <分子 分母> = 1/4倍。分母を小さくすると速く、大きくすると遅い */
+                           <&zip_xy_scaler 1 4>,
+                           /* スクロール速度スケール: <分子 分母> = 1/16倍。分母を小さくすると速く、大きくすると遅い */
+                           <&zip_scroll_scaler 1 16>,
+                           /* キーバインドで動的にカーソル速度を増減できるスケーラ */
                            <&zip_dynamic_xy_scaler>,
+                           /* キーバインドで動的にスクロール速度を増減できるスケーラ */
                            <&zip_dynamic_scroll_scaler>;
+        /* 低速モード: レイヤー1,2で適用（精密操作向け） */
         lowspeedmode {
             layers = <1>,<2>;
             input-processors =  <&trackpad_key_behaviors_L>,
+                                /* 低速モード カーソル速度: 1/15倍 */
                                 <&zip_xy_scaler 1 15>,
+                                /* 低速モード スクロール速度: 1/40倍 */
                                 <&zip_scroll_scaler 1 40>,
                                 <&zip_dynamic_xy_scaler>,
                                 <&zip_dynamic_scroll_scaler>;
