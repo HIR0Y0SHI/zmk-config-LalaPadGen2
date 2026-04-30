@@ -156,11 +156,10 @@
 
     zip_scroll_invert: zip_scroll_invert {
         compatible = "zmk,input-processor-transform";
-        #input-processor-cells = <0>;
+        #input-processor-cells = <1>;
         type = <INPUT_EV_REL>;
         x-codes = <INPUT_REL_HWHEEL>;
         y-codes = <INPUT_REL_WHEEL>;
-        y-invert;
     };
 
     trackpad_listener_R: trackpad_listener_R {
@@ -173,7 +172,7 @@
                            /* スクロール速度スケール: <分子 分母> = 1/20倍。分母を小さくすると速く、大きくすると遅い */
                            <&zip_scroll_scaler 1 20>,
                            /* スクロール方向を反転 */
-                           <&zip_scroll_invert>,
+                           <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
                            /* キーバインドで動的にカーソル速度を増減できるスケーラ */
                            <&zip_dynamic_xy_scaler>,
                            /* キーバインドで動的にスクロール速度を増減できるスケーラ */
@@ -187,7 +186,7 @@
                                 /* 低速モード スクロール速度: 1/40倍 */
                                 <&zip_scroll_scaler 1 40>,
                                 /* スクロール方向を反転 */
-                                <&zip_scroll_invert>,
+                                <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
                                 <&zip_dynamic_xy_scaler>,
                                 <&zip_dynamic_scroll_scaler>;
         };
@@ -202,7 +201,7 @@
                            /* スクロール速度スケール: <分子 分母> = 1/20倍。分母を小さくすると速く、大きくすると遅い */
                            <&zip_scroll_scaler 1 20>,
                            /* スクロール方向を反転 */
-                           <&zip_scroll_invert>,
+                           <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
                            /* キーバインドで動的にカーソル速度を増減できるスケーラ */
                            <&zip_dynamic_xy_scaler>,
                            /* キーバインドで動的にスクロール速度を増減できるスケーラ */
@@ -216,7 +215,7 @@
                                 /* 低速モード スクロール速度: 1/40倍 */
                                 <&zip_scroll_scaler 1 40>,
                                 /* スクロール方向を反転 */
-                                <&zip_scroll_invert>,
+                                <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
                                 <&zip_dynamic_xy_scaler>,
                                 <&zip_dynamic_scroll_scaler>;
         };
