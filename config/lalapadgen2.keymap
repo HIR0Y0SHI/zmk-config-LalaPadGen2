@@ -68,9 +68,13 @@
             key-positions = <8 9>;
         };
 
+        /* L + ; → DELETE
+         * timeout-ms を 100ms に設定：position 19 (;) が &mt2 (tapping-term 200ms) のため、
+         * デフォルト 50ms ではコンボ判定がタイムアウトして発火しない */
         COMBO_DELETE {
             bindings = <&kp DELETE>;
             key-positions = <18 19>;
+            timeout-ms = <100>;
         };
     };
 
