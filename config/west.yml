@@ -6,13 +6,15 @@ manifest:
       url-base: https://github.com/ShiniNet/
     - name: caksoylar
       url-base: https://github.com/caksoylar
+    - name: HIR0Y0SHI
+      url-base: https://github.com/HIR0Y0SHI
   projects:
     - name: zmk
       remote: zmkfirmware
       revision: v0.3.0
       import: app/west.yml
     - name: zmk-driver-iqs9151
-      remote: ShiniNet
+      remote: HIR0Y0SHI
       revision: main
     - name: zmk-easy-charge-indicator
       remote: ShiniNet
