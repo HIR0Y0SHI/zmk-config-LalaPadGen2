@@ -178,8 +178,8 @@
         input-processors = <&trackpad_key_behaviors_R>,
                            /* カーソル速度スケール: <分子 分母> = 1/2倍。分母を小さくすると速く、大きくすると遅い */
                            <&zip_xy_scaler 1 2>,
-                           /* スクロール速度スケール: <分子 分母> = 1/20倍。分母を小さくすると速く、大きくすると遅い */
-                           <&zip_scroll_scaler 1 20>,
+                           /* スクロール速度スケール: <分子 分母> = 1/40倍。分母を小さくすると速く、大きくすると遅い */
+                           <&zip_scroll_scaler 1 40>,
                            /* スクロール方向を反転 */
                            <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
                            /* キーバインドで動的にカーソル速度を増減できるスケーラ */
@@ -207,8 +207,8 @@
         input-processors = <&trackpad_key_behaviors_L>,
                            /* カーソル速度スケール: <分子 分母> = 1/2倍。分母を小さくすると速く、大きくすると遅い */
                            <&zip_xy_scaler 1 2>,
-                           /* スクロール速度スケール: <分子 分母> = 1/20倍。分母を小さくすると速く、大きくすると遅い */
-                           <&zip_scroll_scaler 1 20>,
+                           /* スクロール速度スケール: <分子 分母> = 1/40倍。分母を小さくすると速く、大きくすると遅い */
+                           <&zip_scroll_scaler 1 40>,
                            /* スクロール方向を反転 */
                            <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
                            /* キーバインドで動的にカーソル速度を増減できるスケーラ */
