@@ -95,9 +95,11 @@
                     INPUT_BTN_2
                     INPUT_BTN_3
                     INPUT_BTN_4
-                    INPUT_BTN_5 
+                    INPUT_BTN_5
                     INPUT_BTN_6
                     INPUT_BTN_7
+                    0x113       /* INPUT_BTN_SIDE:  2F right swipe = forward */
+                    0x114       /* INPUT_BTN_EXTRA: 2F left swipe  = back    */
                     >;
         bindings = <
                     &tp_to_pos  POS_TP_LCLK_R
@@ -108,6 +110,8 @@
                     &tp_to_pos  POS_TP_UP_R
                     &tp_to_pos  POS_TP_DOWN_R
                     &tp_to_pos  POS_TP_PINCH_R
+                    &mkp MB5
+                    &mkp MB4
                     >;
     };
     trackpad_key_behaviors_L: trackpad_key_behaviors_L {
@@ -120,9 +124,11 @@
                     INPUT_BTN_2
                     INPUT_BTN_3
                     INPUT_BTN_4
-                    INPUT_BTN_5 
+                    INPUT_BTN_5
                     INPUT_BTN_6
                     INPUT_BTN_7
+                    0x113       /* INPUT_BTN_SIDE:  2F right swipe = forward */
+                    0x114       /* INPUT_BTN_EXTRA: 2F left swipe  = back    */
                     >;
         bindings = <
                     &tp_to_pos  POS_TP_LCLK_L
@@ -133,6 +139,8 @@
                     &tp_to_pos  POS_TP_UP_L
                     &tp_to_pos  POS_TP_DOWN_L
                     &tp_to_pos  POS_TP_PINCH_L
+                    &mkp MB5
+                    &mkp MB4
                     >;
     };
     
