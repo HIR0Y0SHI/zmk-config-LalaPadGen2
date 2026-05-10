@@ -91,6 +91,7 @@
                      &none                &kp RIGHT         &kp DOWN   &kp LEFT     &kp UP  &kp UP     &kp LEFT            &kp DOWN             &kp RIGHT         &none
 &mkp LCLK            &mkp RCLK            &mkp MCLK                                                                                             &mkp LCLK         &mkp RCLK   &mkp MCLK
 &kp LC(LEFT_ARROW)   &kp LC(RIGHT_ARROW)  &kp LC(UP_ARROW)  &kp LG(W)  &kp LCTRL                       &kp LC(LEFT_ARROW)  &kp LC(RIGHT_ARROW)  &kp LC(UP_ARROW)  &kp LG(W)   &kp LCTRL
+&kp LG(LA(LEFT))     &kp LG(LA(RIGHT))    &kp LG(LA(LEFT))  &kp LG(LA(RIGHT))
             >;
         };
 
@@ -104,6 +105,7 @@
                  &kp K_MUTE     &trans        &kp C_VOLUME_DOWN  &trans       &kp C_VOLUME_UP  &kp C_VOLUME_UP  &trans            &kp C_VOL_DN       &trans         &kp K_MUTE
 &trans           &trans         &trans                                                                                                               &trans         &trans                &trans
 &kp LC(LEFT)     &kp LC(RIGHT)  &trans        &trans             &trans                                         &kp LC(LEFT)      &kp LC(RIGHT)      &trans         &trans                &trans
+&trans           &trans         &trans        &trans
             >;
         };
 
@@ -117,6 +119,7 @@
            &trans              &kp LG(LA(RIGHT_ARROW))  &trans               &kp LA(LG(LEFT_ARROW))  &trans  &trans  &kp LG(LA(LEFT_ARROW))  &trans                 &kp LG(LA(RIGHT_ARROW))  &trans
 &trans     &trans              &trans                                                                                                                               &trans                   &trans           &trans
 &trans     &trans              &trans                   &trans               &trans                                  &trans                  &trans                 &trans                   &trans           &trans
+&trans     &trans              &trans                   &trans
             >;
         };
 
@@ -130,6 +133,7 @@
               &trans        &trans        &trans   &trans   &trans  &trans  &trans         &trans         &trans        &trans
 &trans        &trans        &trans                                                                        &trans        &trans  &trans
 &trans        &trans        &trans        &trans   &trans                   &trans         &trans         &trans        &trans  &trans
+&trans        &trans        &trans        &trans
             >;
         };
     };

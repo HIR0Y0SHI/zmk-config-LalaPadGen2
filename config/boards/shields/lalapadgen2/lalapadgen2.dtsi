@@ -25,6 +25,11 @@
 #define POS_TP_DOWN_R  66
 #define POS_TP_PINCH_R 67
 
+#define POS_TP_BL_L    68
+#define POS_TP_BR_L    69
+#define POS_TP_BL_R    70
+#define POS_TP_BR_R    71
+
 / {
     chosen {
         zmk,physical-layout = &lalapadgen2_physical_layout;
@@ -42,6 +47,7 @@
                     RC(4,1) RC(4,2)	RC(4,3)	RC(4,4)	RC(4,5)	RC(4,6)	RC(4,7)	RC(4,8)	RC(4,9)	RC(4,10)	
             RC(5,0)	RC(5,1) RC(5,2)                                                 RC(5,9)	RC(5,10) RC(5,11)
             RC(6,0)	RC(6,1) RC(6,2)	RC(6,3)	RC(6,4)                 RC(6,7)	RC(6,8) RC(6,9)	RC(6,10) RC(6,11)
+            RC(5,3) RC(5,4) RC(5,5) RC(5,6)
         >;
     };
 
@@ -101,6 +107,8 @@
                     INPUT_BTN_7
                     0x113       /* INPUT_BTN_SIDE:  2F right swipe = back    */
                     0x114       /* INPUT_BTN_EXTRA: 2F left swipe  = forward */
+                    INPUT_BTN_8 /* tap-zone: bottom-left  */
+                    INPUT_BTN_9 /* tap-zone: bottom-right */
                     >;
         bindings = <
                     &tp_to_pos  POS_TP_LCLK_R
@@ -113,6 +121,8 @@
                     &tp_to_pos  POS_TP_PINCH_R
                     &mkp MB4
                     &mkp MB5
+                    &tp_to_pos  POS_TP_BL_R
+                    &tp_to_pos  POS_TP_BR_R
                     >;
     };
     trackpad_key_behaviors_L: trackpad_key_behaviors_L {
@@ -130,6 +140,8 @@
                     INPUT_BTN_7
                     0x113       /* INPUT_BTN_SIDE:  2F right swipe = back    */
                     0x114       /* INPUT_BTN_EXTRA: 2F left swipe  = forward */
+                    INPUT_BTN_8 /* tap-zone: bottom-left  */
+                    INPUT_BTN_9 /* tap-zone: bottom-right */
                     >;
         bindings = <
                     &tp_to_pos  POS_TP_LCLK_L
@@ -142,6 +154,8 @@
                     &tp_to_pos  POS_TP_PINCH_L
                     &mkp MB4
                     &mkp MB5
+                    &tp_to_pos  POS_TP_BL_L
+                    &tp_to_pos  POS_TP_BR_L
                     >;
     };
     
@@ -267,5 +281,23 @@ status = "okay";
         reg = <0x56>;
         status = "okay";
         irq-gpios = <&xiao_d 6 (GPIO_ACTIVE_LOW | GPIO_PULL_UP)>;
+
+        tap_zones {
+            compatible = "azoteq,iqs9151-tap-zones";
+
+            /* 12bit 絶対座標 (0-4095)。両端 inclusive。
+             * Y 軸の向き (Y=0 が上か下か) は実機で確認すること。
+             * 期待と逆ならこの 2 ゾーンの y-range を反転する。 */
+            bottom_left {
+                x-range = <0 2047>;
+                y-range = <2730 4095>;
+                button-code = <INPUT_BTN_8>;
+            };
+            bottom_right {
+                x-range = <2048 4095>;
+                y-range = <2730 4095>;
+                button-code = <INPUT_BTN_9>;
+            };
+        };
     };
 };

@@ -77,6 +77,11 @@
             , <&key_physical_attrs 100 100   1000 600      0     0     0>
             , <&key_physical_attrs 100 100   1100 600      0     0     0>
             , <&key_physical_attrs 100 100   1200 600      0     0     0>
+            /* Tap-zone virtual positions (POS_TP_BL_L, POS_TP_BR_L, POS_TP_BL_R, POS_TP_BR_R) */
+            , <&key_physical_attrs  50  50    350 500      0     0     0>
+            , <&key_physical_attrs  50  50    450 500      0     0     0>
+            , <&key_physical_attrs  50  50    800 500      0     0     0>
+            , <&key_physical_attrs  50  50    900 500      0     0     0>
             ;
     };
 };
