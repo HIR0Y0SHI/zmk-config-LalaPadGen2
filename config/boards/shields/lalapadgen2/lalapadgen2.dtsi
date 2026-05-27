@@ -192,8 +192,8 @@
         input-processors = <&trackpad_key_behaviors_R>,
                            /* カーソル速度スケール: <分子 分母> = 1/2倍。分母を小さくすると速く、大きくすると遅い */
                            <&zip_xy_scaler 1 2>,
-                           /* スクロール速度スケール: <分子 分母> = 1/40倍。分母を小さくすると速く、大きくすると遅い */
-                           <&zip_scroll_scaler 1 40>,
+                           /* スクロール速度スケール: <分子 分母> = 1/120倍。分母を小さくすると速く、大きくすると遅い */
+                           <&zip_scroll_scaler 1 120>,
                            /* スクロール方向を反転 */
                            <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
                            /* キーバインドで動的にカーソル速度を増減できるスケーラ */
@@ -206,8 +206,8 @@
             input-processors =  <&trackpad_key_behaviors_R>,
                                 /* 低速モード カーソル速度: 1/15倍 */
                                 <&zip_xy_scaler 1 15>,
-                                /* 低速モード スクロール速度: 1/40倍 */
-                                <&zip_scroll_scaler 1 40>,
+                                /* 低速モード スクロール速度: 1/120倍 */
+                                <&zip_scroll_scaler 1 120>,
                                 /* スクロール方向を反転 */
                                 <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
                                 <&zip_dynamic_xy_scaler>,
@@ -221,8 +221,8 @@
         input-processors = <&trackpad_key_behaviors_L>,
                            /* カーソル速度スケール: <分子 分母> = 1/2倍。分母を小さくすると速く、大きくすると遅い */
                            <&zip_xy_scaler 1 2>,
-                           /* スクロール速度スケール: <分子 分母> = 1/40倍。分母を小さくすると速く、大きくすると遅い */
-                           <&zip_scroll_scaler 1 40>,
+                           /* スクロール速度スケール: <分子 分母> = 1/120倍。分母を小さくすると速く、大きくすると遅い */
+                           <&zip_scroll_scaler 1 120>,
                            /* スクロール方向を反転 */
                            <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
                            /* キーバインドで動的にカーソル速度を増減できるスケーラ */
@@ -235,8 +235,8 @@
             input-processors =  <&trackpad_key_behaviors_L>,
                                 /* 低速モード カーソル速度: 1/15倍 */
                                 <&zip_xy_scaler 1 15>,
-                                /* 低速モード スクロール速度: 1/40倍 */
-                                <&zip_scroll_scaler 1 40>,
+                                /* 低速モード スクロール速度: 1/120倍 */
+                                <&zip_scroll_scaler 1 120>,
                                 /* スクロール方向を反転 */
                                 <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
                                 <&zip_dynamic_xy_scaler>,
