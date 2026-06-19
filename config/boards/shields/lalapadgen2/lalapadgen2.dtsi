@@ -286,17 +286,18 @@ status = "okay";
             compatible = "azoteq,iqs9151-tap-zones";
 
             /* 実解像度: X=0..2457 / Y=0..3072 (RESOLUTION_X/Y Kconfig より)。
-             * 下 1/3 (Y >= 2048) × 左右半分 (X 1228 で分割) を corner として扱う。
+             * 下 1/5 (Y >= 2458) × 左右各 30% (左: X<=737 / 右: X>=1720) の「隅」だけを
+             * corner として扱う。中央帯 (X 738..1719) と下端より上は無反応にして誤爆を防ぐ。
              * Y=0 が上端である標準向きを前提。もし左下/右下のタップで cmd+option+左/右 が
-             * 発火しない場合は Y 軸が反転しているので、両ゾーンの y-range を <0 1024> に変更する。 */
+             * 発火しない場合は Y 軸が反転しているので、両ゾーンの y-range を <0 614> に変更する。 */
             bottom_left {
-                x-range = <0 1228>;
-                y-range = <2048 3072>;
+                x-range = <0 737>;
+                y-range = <2458 3072>;
                 button-code = <INPUT_BTN_8>;
             };
             bottom_right {
-                x-range = <1229 2457>;
-                y-range = <2048 3072>;
+                x-range = <1720 2457>;
+                y-range = <2458 3072>;
                 button-code = <INPUT_BTN_9>;
             };
         };
