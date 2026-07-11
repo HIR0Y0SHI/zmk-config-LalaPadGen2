@@ -195,7 +195,7 @@
                            /* スクロール速度スケール: <分子 分母> = 1/120倍。分母を小さくすると速く、大きくすると遅い */
                            <&zip_scroll_scaler 1 120>,
                            /* スクロール方向を反転 */
-                           <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
+                           <&zip_scroll_invert (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
                            /* キーバインドで動的にカーソル速度を増減できるスケーラ */
                            <&zip_dynamic_xy_scaler>,
                            /* キーバインドで動的にスクロール速度を増減できるスケーラ */
@@ -209,7 +209,7 @@
                                 /* 低速モード スクロール速度: 1/120倍 */
                                 <&zip_scroll_scaler 1 120>,
                                 /* スクロール方向を反転 */
-                                <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
+                                <&zip_scroll_invert (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
                                 <&zip_dynamic_xy_scaler>,
                                 <&zip_dynamic_scroll_scaler>;
         };
@@ -224,7 +224,7 @@
                            /* スクロール速度スケール: <分子 分母> = 1/120倍。分母を小さくすると速く、大きくすると遅い */
                            <&zip_scroll_scaler 1 120>,
                            /* スクロール方向を反転 */
-                           <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
+                           <&zip_scroll_invert (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
                            /* キーバインドで動的にカーソル速度を増減できるスケーラ */
                            <&zip_dynamic_xy_scaler>,
                            /* キーバインドで動的にスクロール速度を増減できるスケーラ */
@@ -238,7 +238,7 @@
                                 /* 低速モード スクロール速度: 1/120倍 */
                                 <&zip_scroll_scaler 1 120>,
                                 /* スクロール方向を反転 */
-                                <&zip_scroll_invert INPUT_TRANSFORM_Y_INVERT>,
+                                <&zip_scroll_invert (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)>,
                                 <&zip_dynamic_xy_scaler>,
                                 <&zip_dynamic_scroll_scaler>;
         };
